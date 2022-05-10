@@ -40,7 +40,7 @@ function Video () {
             <button onClick={()=>handleNext()} className={styles.button}>Next</button>
           
         </section>
-        <Link href='/'>
+          <Link href='/'>
             <a className={styles.a} >HOME</a>
             </Link>
         </div>
