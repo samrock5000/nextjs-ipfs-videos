@@ -1,0 +1,38 @@
+import useSWR from 'swr';
+Oimport styles from '../../styles/Video.module.css'
+import tracks from '../api/videos'
+import React, { useState } from 'react';
+
+const [currtrack, setTrack] = useState(Number);
+
+function handleNext(){
+    setTrack(currtrack + 1)
+    const goTonext = tracks.tracks + `${".video"+setTrack}`
+    console.log(goTonext)
+}
+
+console.log(tracks)
+function Video () {
+    const { data, error } = useSWR('https://bafybeih4o67p2yccx5dres56tywkzy7qhnsmhmrlx7rgnln44ehgnrkmpe.ipfs.dweb.link/rufftone.mp4', fetch)
+
+    if(error) return <div className={styles.section}>Failed to Load</div>
+    if(!data) return <div className={styles.section}>Loading...</div>
+      
+    return (
+        <div className={styles.section}>
+            <section >
+            <video
+                 autoPlay={true}
+                 className={styles.video}
+                 controls 
+                 src={data.url}>
+
+            </video>
+            <button onClick={handleNext()} className={styles.button}>Next</button>
+
+        </section>
+        </div>
+      
+    )
+}
+export default Video;
