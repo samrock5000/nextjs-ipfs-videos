@@ -12,7 +12,8 @@
     
     min-height: 200px;
     width: 50vw;
-    margin: 10px auto;
+    margin: auto;
+    margin-top: 5rem;
     background: white;
     border-radius: 5px;
     text-align: center;
@@ -20,62 +21,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    background: rgb(148,187,233);
-    background: radial-gradient(circle, rgba(148,187,233,1) 10%, rgba(238,174,202,1) 85%);
-  }
-
-  .logo {
-    display: flex;
-    text-align: center;
-    width: auto;
-    height: 250px;
-    margin: auto;
- 
+    background: rgb(48, 78, 94);
+    background: radial-gradient(circle, rgb(79, 24, 124) 10%, rgb(82, 80, 80) 85%);
    
   }
-  
-  .logo b{
-    font: 400 19vh "Vibur";
-    color: #fee;
-    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+
+  .container {
+    color: #fff;
+    text-shadow:
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px rgb(255, 0, 255),
+        0 0 82px rgb(212, 0, 255),
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
   }
-  .logo b span{
-    animation: blink linear infinite 2s;
+
+  .big{
+    text-transform:uppercase;
+    font-size:6vw;
   }
-  .logo b span:nth-of-type(2){
-    animation: blink linear infinite 3s;
-  }
-  @keyframes blink {
-    78% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    79%{
-       color: #333;
-    }
-    80% {
-      
-      text-shadow: none;
-    }
-    81% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    82% {
-      color: #333;
-      text-shadow: none;
-    }
-    83% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-    92% {
-      color: #333;
-      text-shadow: none;
-    }
-    92.5% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-  }
-  
+
